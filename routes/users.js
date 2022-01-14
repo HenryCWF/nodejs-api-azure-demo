@@ -23,9 +23,9 @@ router.get("/echo/:id", (req, res) => {
     var ts =  Date.now();
     console.log(`Start:/poke/${id}-${ts}`);
 
-    const data = {
-        id :`${id}`
-    };
+    // const data = {
+    //     id :`${id}`
+    // };
 
     res.status(200).send(hdrs);
     ts =  Date.now();
