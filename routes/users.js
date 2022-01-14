@@ -17,4 +17,20 @@ router.get('/', function(req, res, next) {
   console.log(`End:/echo?${echoStr}-${ts}`);
 });
 
+router.get("/echo/:id", (req, res) => {
+    const { id } = req.params;
+    const hdrs = req.headers;
+    var ts =  Date.now();
+    console.log(`Start:/poke/${id}-${ts}`);
+
+    const data = {
+        id :`${id}`
+    };
+
+    res.status(200).send(hdrs);
+    ts =  Date.now();
+    console.log(`End:/poke/${id}-${ts}`);
+})
+
+
 module.exports = router;
